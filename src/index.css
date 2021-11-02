@@ -12,6 +12,10 @@ code {
     monospace;
 }
 
+.main {
+  background-color: rgb(255, 255, 255);
+}
+
 .head-container {
   font-size: larger;
 }
@@ -21,7 +25,45 @@ code {
   justify-content: center;
 }
 
+.container p {
+  margin: 50px 0 50px 0;
+}
+
 .gen-card {
   height: 300px;
-  margin-top: 200px;
+  margin-top: 150px;
+  border-radius: 30px;
+}
+
+.card-header:first-child {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.card-header {
+  padding: .5rem 1rem;
+  margin-bottom: 0;
+  background-color: rgb(255, 165, 80);
+  border-bottom: 1px solid rgba(0,0,0,.125);
+  border-top-left-radius: 30px;
+}
+
+.password-text {
+  margin-top: auto 0 40px 0;
+}
+
+.navbar-light .navbar-brand {
+  color: rgb(173 0 0 / 90%);
+  font-size: 40px;
+}
+
+.navbar-brand {
+  padding-top: .3125rem;
+  padding-bottom: .3125rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  text-decoration: none;
+  white-space: nowrap;
+  text-align: center;
+  margin: auto;
 }

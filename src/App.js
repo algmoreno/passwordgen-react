@@ -5,7 +5,7 @@ import Main from '../src/pages/Main';
 function App() {
   return (
     <Router>
-      <div>
+      <div className='main'>
         <Switch>
           <Route exact path="/" component={Main} />
         </Switch>

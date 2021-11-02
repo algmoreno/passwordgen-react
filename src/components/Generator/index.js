@@ -9,9 +9,9 @@ function Generator() {
         <div class='col-3'></div>
         <div class='col-6'>
           <Card className="text-center gen-card">
-            <Card.Header>Click Go to Start</Card.Header>
+            <Card.Header className='gen-card-header'>Click Go to Start</Card.Header>
             <Card.Body>
-              <Card.Text>
+              <Card.Text className='password-text'>
                 With supporting text below as a natural lead-in to additional content.
               </Card.Text>
               <Button variant="primary">Go</Button>
