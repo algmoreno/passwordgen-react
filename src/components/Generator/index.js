@@ -4,17 +4,23 @@ import Button from 'react-bootstrap/Button';
 
 function Generator() {
   return (
-    <Card className="text-center">
-      <Card.Header>Featured</Card.Header>
-      <Card.Body>
-        <Card.Title>Special title treatment</Card.Title>
-        <Card.Text>
-          With supporting text below as a natural lead-in to additional content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-      <Card.Footer className="text-muted">2 days ago</Card.Footer>
-    </Card>
+    <div class='container'>
+      <div class='row align-items-end'>
+        <div class='col-3'></div>
+        <div class='col-6'>
+          <Card className="text-center gen-card">
+            <Card.Header>Click Go to Start</Card.Header>
+            <Card.Body>
+              <Card.Text>
+                With supporting text below as a natural lead-in to additional content.
+              </Card.Text>
+              <Button variant="primary">Go</Button>
+            </Card.Body>
+          </Card>
+        </div>
+        <div class= 'col-3'></div>
+      </div>
+    </div>
   )
 }
 

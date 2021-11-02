@@ -11,3 +11,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.head-container {
+  font-size: larger;
+}
+
+.container {
+  margin: auto;
+  justify-content: center;
+}
+
+.gen-card {
+  height: 300px;
+  margin-top: 200px;
+}
