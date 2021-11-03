@@ -3,6 +3,15 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
 function Generator() {
+
+  var generatePassword = () => {
+
+  }
+
+  var writePassword = () => {
+    
+  }
+
   return (
     <div class='container'>
       <div class='row align-items-end'>
@@ -12,9 +21,9 @@ function Generator() {
             <Card.Header className='gen-card-header'>Click Go to Start</Card.Header>
             <Card.Body>
               <Card.Text className='password-text'>
-                With supporting text below as a natural lead-in to additional content.
+                {writePassword}
               </Card.Text>
-              <Button variant="primary">Go</Button>
+              <Button onClick={generatePassword} variant="primary">Go</Button>
             </Card.Body>
           </Card>
         </div>
