@@ -17,12 +17,12 @@ const Generator = () => {
       alert('Enter a valid response');
     }
 
-    let confirmLower = confirm("Press 'Ok' if you want lower case letters in your password");
-    let confirmUpper = confirm("Press 'Ok' if you want upper case letters in your password");
-    let confirmNumber = confirm("Press 'Ok' if you want numbers in your password");
-    let confirmSpecial = confirm("Press 'Ok' if you want special characters in your password");
+    let confirmLower = window.confirm("Press 'Ok' if you want lower case letters in your password");
+    let confirmUpper = window.confirm("Press 'Ok' if you want upper case letters in your password");
+    let confirmNumber = window.confirm("Press 'Ok' if you want numbers in your password");
+    let confirmSpecial = window.confirm("Press 'Ok' if you want special characters in your password");
 
-    let length = inputLength;
+    let length = passLength;
 
     if (confirmLower) {
       charset += "abcdefghijklmnopqrstuvwxyz"
@@ -40,14 +40,14 @@ const Generator = () => {
     for (var i = 0, n = charset.length; i < length; ++i) {
       retVal += charset.charAt(Math.floor(Math.random() * n));
     }
-    
-    return retVal;
 
+    writePassword(retVal)
 
   }
 
-  function writePassword() {
-
+  function writePassword(retVal) {
+    let password = retVal;
+    return password
   }
 
   return (
