@@ -9,7 +9,7 @@ const Generator = () => {
 
   let charset = "";
 
-  const [password, setPassword] = useState("");
+  const [password, setPassword] = useState("Password will appear here");
 
   function generatePassword() {
 
@@ -60,7 +60,7 @@ const Generator = () => {
               <Card.Text className='password-text'>
                 {password}
               </Card.Text>
-              <Button onClick={generatePassword} variant="primary">Go</Button>
+              <Button className='go-btn' onClick={generatePassword} variant="primary">Go</Button>
             </Card.Body>
           </Card>
         </div>

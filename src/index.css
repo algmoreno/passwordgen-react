@@ -27,6 +27,7 @@ code {
 
 .container p {
   margin: 50px 0 50px 0;
+  font-size: 40px;
 }
 
 .gen-card {
@@ -43,13 +44,17 @@ code {
 .card-header {
   padding: .5rem 1rem;
   margin-bottom: 0;
-  background-color: rgb(255, 165, 80);
+  background-color: rgb(255, 135, 23);
   border-bottom: 1px solid rgba(0,0,0,.125);
   border-top-left-radius: 30px;
 }
 
 .password-text {
   margin-top: auto 0 40px 0;
+}
+
+.go-btn {
+  background-color: teal;
 }
 
 .navbar-light .navbar-brand {
