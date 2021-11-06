@@ -40,15 +40,9 @@ const Generator = () => {
     for (var i = 0, n = charset.length; i < length; ++i) {
       retVal += charset.charAt(Math.floor(Math.random() * n));
     }
-
-    writePassword(retVal)
-
   }
 
-  function writePassword(retVal) {
-    let password = retVal;
-    return password
-  }
+  console.log(retVal)
 
   return (
     <div className='container'>
@@ -59,7 +53,7 @@ const Generator = () => {
             <Card.Header className='gen-card-header'>Click Go to Start</Card.Header>
             <Card.Body>
               <Card.Text className='password-text'>
-                {writePassword()}
+                {retVal}
               </Card.Text>
               <Button onClick={generatePassword} variant="primary">Go</Button>
             </Card.Body>
