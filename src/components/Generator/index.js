@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
@@ -7,10 +8,12 @@ import Form from 'react-bootstrap/Form';
 const Generator = () => {
 
   let charset = "";
-  let retVal = "";
+
+  const [password, setPassword] = useState("");
 
   function generatePassword() {
 
+    let retVal = ""
     let passLength = window.prompt("Choose a password length between 8-128");
 
     if (passLength < 8 || passLength > 128 || passLength === '') {
@@ -40,9 +43,11 @@ const Generator = () => {
     for (var i = 0, n = charset.length; i < length; ++i) {
       retVal += charset.charAt(Math.floor(Math.random() * n));
     }
+
+    setPassword(retVal)
+
   }
 
-  console.log(retVal)
 
   return (
     <div className='container'>
@@ -53,7 +58,7 @@ const Generator = () => {
             <Card.Header className='gen-card-header'>Click Go to Start</Card.Header>
             <Card.Body>
               <Card.Text className='password-text'>
-                {retVal}
+                {password}
               </Card.Text>
               <Button onClick={generatePassword} variant="primary">Go</Button>
             </Card.Body>
