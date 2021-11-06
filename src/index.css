@@ -44,6 +44,7 @@ code {
 .card-header {
   padding: .5rem 1rem;
   margin-bottom: 0;
+  color: white;
   background-color: rgb(255, 135, 23);
   border-bottom: 1px solid rgba(0,0,0,.125);
   border-top-left-radius: 30px;
@@ -55,6 +56,7 @@ code {
 
 .go-btn {
   background-color: teal;
+  width: 10%
 }
 
 .navbar-light .navbar-brand {
