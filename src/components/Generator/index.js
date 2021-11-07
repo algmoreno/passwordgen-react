@@ -24,17 +24,8 @@ const Generator = () => {
 
   function generatePassword() {
 
-    console.log(length); 
     let retVal = ""
     let charset = "";
-    // let passLength = window.prompt("Choose a password length between 8-128");
-
-    // if (passLength < 8 || passLength > 128 || passLength === '') {
-    //   alert('Enter a valid response');
-    //   return null;
-    // }
-
-    // let length = passLength;
 
     if (upper) {
       charset += "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -54,9 +45,6 @@ const Generator = () => {
     }
 
     setPassword(retVal)
-
-    console.log(charset)
-
   }
 
 
@@ -65,14 +53,18 @@ const Generator = () => {
       <div className='row align-items-end'>
         <div className='col-3'></div>
         <div className='col-6'>
+          
           <Card className="text-center gen-card">
-            <Card.Header className='gen-card-header'>Click Go to Start</Card.Header>
+            
+            <Card.Header className='gen-card-header'>
+            <Button className='go-btn' onClick={setShow} variant="primary">Preferences</Button>
+            </Card.Header>
             <Card.Body>
               <Card.Text className='password-text'>
                 {password}
               </Card.Text>
-              <Button className='go-btn' variant="primary">Go</Button>
-              <Button className='go-btn' onClick={setShow} variant="primary">Preferences</Button>
+              <Button className='go-btn' onClick={generatePassword} variant="primary">Go</Button>
+              
             </Card.Body>
           </Card>
           {setShow && (
@@ -100,10 +92,10 @@ const Generator = () => {
                   </Form>
                 </Modal.Body>
                 <Modal.Footer>
-                  <Button variant="secondary" onClick={handleClose}>
+                  {/* <Button variant="secondary" onClick={handleClose}>
                     Close
-                  </Button>
-                  <Button variant="primary" onClick={handleClose && generatePassword}>
+                  </Button> */}
+                  <Button variant="primary" onClick={handleClose}>
                     Save Changes
                   </Button>
                 </Modal.Footer>

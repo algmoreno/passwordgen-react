@@ -6,7 +6,10 @@ function Title() {
   return (
     <Navbar>
       <Container className='head-container'>
-        <Navbar.Brand className='head' href="#home">Password Generator</Navbar.Brand>
+        <div className='col-6'>
+          <Navbar.Brand className='head' href="#home">Password Generator</Navbar.Brand>
+          <br />
+        </div>
         <Navbar.Toggle />
       </Container>
     </Navbar>
