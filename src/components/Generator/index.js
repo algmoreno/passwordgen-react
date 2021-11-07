@@ -9,6 +9,7 @@ import Form from 'react-bootstrap/Form';
 const Generator = () => {
 
   const [password, setPassword] = useState("Password will appear here");
+  const [length, setLength] = useState('');
   const [upper, setUpper] = useState(false);
   const [lower, setLower] = useState(false)
   const [numbers, setNumbers] = useState(false)
@@ -23,6 +24,7 @@ const Generator = () => {
 
   function generatePassword() {
 
+    console.log(length); 
     let retVal = ""
     let charset = "";
     // let passLength = window.prompt("Choose a password length between 8-128");
@@ -47,11 +49,13 @@ const Generator = () => {
       charset += "!\"#$%&',()*+-./:;<>=@[]`{}|~"
     }
 
-    for (var i = 0, n = 10; i < 10; ++i) {
+    for (var i = 0, n = charset.length; i < length; ++i) {
       retVal += charset.charAt(Math.floor(Math.random() * n));
     }
 
     setPassword(retVal)
+
+    console.log(charset)
 
   }
 
@@ -82,7 +86,7 @@ const Generator = () => {
                   <Form>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                       <Form.Label>Password Length</Form.Label>
-                      <Form.Control type="email" placeholder="" />
+                      <Form.Control onChange ={event => setLength(event.target.value)} type="text" placeholder="" />
                       <Form.Text className="text-muted">
                         Enter a password length between 8-128
                       </Form.Text>
