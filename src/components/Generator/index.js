@@ -53,11 +53,9 @@ const Generator = () => {
       <div className='row align-items-end'>
         <div className='col-3'></div>
         <div className='col-6'>
-          
           <Card className="text-center gen-card">
-            
             <Card.Header className='gen-card-header'>
-            <Button className='go-btn' onClick={setShow} variant="primary">Preferences</Button>
+            <Button className='pref-btn' onClick={setShow} variant="primary">Preferences</Button>
             </Card.Header>
             <Card.Body>
               <Card.Text className='password-text'>

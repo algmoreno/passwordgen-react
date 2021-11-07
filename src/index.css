@@ -54,10 +54,26 @@ code {
   margin-top: auto 0 40px 0;
 }
 
+.pref-btn {
+  background-color: white;
+  color: rgb(255, 135, 23);;
+  border: 2px solid rgb(184, 103, 37);
+}
+
+.pref-btn:hover {
+  background-color: rgb(255, 135, 23);
+  color: white;
+}
+
 .go-btn {
   background-color: teal;
   width: 20%;
   margin: 0 5px 0 5px;
+}
+
+.go-btn:hover {
+  background-color: white;
+  color: teal;
 }
 
 .navbar-light .navbar-brand {
