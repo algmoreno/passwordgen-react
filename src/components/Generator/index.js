@@ -16,6 +16,10 @@ const Generator = () => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const upperClick = () => setUpper(!upper);
+  const lowerClick = () => setLower(!lower);
+  const numberClick = () => setNumbers(!numbers);
+  const specialClick = () => setSpecial(!special);
 
   function generatePassword() {
 
@@ -43,9 +47,9 @@ const Generator = () => {
       charset += "!\"#$%&',()*+-./:;<>=@[]`{}|~"
     }
 
-    // for (var i = 0, n = charset.length; i < length; ++i) {
-    //   retVal += charset.charAt(Math.floor(Math.random() * n));
-    // }
+    for (var i = 0, n = 10; i < 10; ++i) {
+      retVal += charset.charAt(Math.floor(Math.random() * n));
+    }
 
     setPassword(retVal)
 
@@ -63,7 +67,8 @@ const Generator = () => {
               <Card.Text className='password-text'>
                 {password}
               </Card.Text>
-              <Button className='go-btn' onClick={setShow} variant="primary">Go</Button>
+              <Button className='go-btn' variant="primary">Go</Button>
+              <Button className='go-btn' onClick={setShow} variant="primary">Preferences</Button>
             </Card.Body>
           </Card>
           {setShow && (
@@ -83,10 +88,10 @@ const Generator = () => {
                       </Form.Text>
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                      <Form.Check onClick={setUpper(true)} type="checkbox" label="Uppercase" />
-                      <Form.Check onClick={setLower(true)} type="checkbox" label="Lowercase" />
-                      <Form.Check onClick={setNumbers(true)} type="checkbox" label="Numbers" />
-                      <Form.Check onClick={setSpecial(true)} type="checkbox" label="Special Characters" />
+                      <Form.Check onClick ={upperClick} checked={upper} type="checkbox" label="Uppercase" />
+                      <Form.Check onClick ={lowerClick} checked={lower} type="checkbox" label="Lowercase" />
+                      <Form.Check onClick ={numberClick} checked={numbers} type="checkbox" label="Numbers" />
+                      <Form.Check onClick ={specialClick} checked={special} type="checkbox" label="Special Characters" />
                     </Form.Group>
                   </Form>
                 </Modal.Body>
