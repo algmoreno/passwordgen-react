@@ -76,7 +76,7 @@ const Generator = () => {
                   <Form>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                       <Form.Label>Password Length</Form.Label>
-                      <Form.Control onChange ={event => setLength(event.target.value)} type="text" placeholder="" />
+                      <Form.Control onChange ={event => setLength(event.target.value)} type="text" placeholder={length} />
                       <Form.Text className="text-muted">
                         Enter a password length between 8-128
                       </Form.Text>
